@@ -1,112 +1,87 @@
 "use strict";
 
-// for (let i = 0; i < 3; i++) {
+// const usdCurr = 28;
+// const eurCurr = 32;
+// const discount = 0.9;
+
+// function convert(amount, curr) {
+//     return curr * amount;
+// }
+
+// function promotion(result) {
+//     console.log(result * discount);
+// }
+
+// const res = convert(500, usdCurr)
+// promotion(res);
+
+// function test() {
+//     for (let i = 0; i < 5; i++) {
 //         console.log(i);
-//         for (let j = 0; j < 3; j++) {
-//             console.log(j);
+//         if (i === 3) return
 //     }
+//     console.log('Done');
 // }
 
-// let result = '';
-// const length = 7;
+// test();
 
-// for (let i = 1; i < length; i++) {
-//     for (let j = 0; j < i; j++) {
-//         result += '*';
-//     }
-//     result += '\n';
+// function unDefined() {};
+// console.log(unDefined());
+
+// function sayHello(name) {
+//     console.log(`Привет, ${name}`);
+
 // }
-// console.log(result);
+// sayHello('Антон');
 
-// first: for (let i = 0; i < 3; i++) {
-//     console.log(`First level: ${i}`);
-//     for (let j = 0; j < 3; j++) {
-//         console.log(`Second level: ${j}`);
-//         for (let k = 0; k < 3; k++) {
-//             if (k === 2) continue first;
-//             console.log(`Third level: ${k}`);
-//         }
-//     }
+
+// function returnNeighboringNumbers(num) {
+//     let arr = [];
+//     arr[0] = num - 1;
+//     arr[1] = num;
+//     arr[2] = num + 1;
+//     console.log(arr);
 // }
+// returnNeighboringNumbers(10);
 
-// function firstTask() {
-    
-//     const arr = [3, 5, 8, 16, 20, 23, 50];
-//     const result = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         result[i] = arr[i];
-//     }
-//     console.log(result);
-//     return result;
-// }
+function getMathResult(base, long) {
+    if (typeof(long) !== 'number' || long <= 0) {
+        return base;
+    }
 
-// firstTask();
+    let str = '';
 
-// function secondTask() {
-//     const data = [5, 10, 'Shopping', 20, 'Homework'];
-    
-//     for (let i = 0; i < data.length; i++) {
-//         if (typeof(data[i]) === 'number') {
-//             data[i] = data[i] * 2;
-//         } else if (typeof(data[i]) === 'string') {
-//             data[i] = `${data[i]} - done`;
-//         }
-//     }
-//     console.log(data);
-//     return data;
-// }
-
-// secondTask();
-
-// function thirdTask() {
-//     const data = [5, 10, 'Shopping', 20, 'Homework'];
-//     const result = [];
-    
-//     for (let i = 1; i <= data.length; i++) {
-//         result[i - 1] = data[data.length - i];
-//     }
-//     console.log(result);
-//     return result;
-// }
-// thirdTask();
-
-let num = 20;
-
-function showFirstMessage(text) {
-    console.log(text);
-    // let num = 30;
-    console.log(num);
-}
-showFirstMessage('Hello World!');
-console.log(num);
-
-// function calc(a, b) {
-//     return (a + b);
-// }
-
-// console.log(calc(5, 7));
-// console.log(calc(4, 2));
-// console.log(calc(5, 10));
-
-function ret() {
-    let num = 50;
-    return num;
+    for (let i = 1; i <= long; i++) {
+        if (i === long) {
+            str += `${base * i}`;
+        } else {
+            str += `${base * i}---`;
+        }
+    }
+    console.log(str);
+    return str;
 }
 
-const anotherNum = ret();
-console.log(anotherNum);
+getMathResult(10, 5);
 
-let logger = function() {
-    console.log('Hello!')
-};
+const str = "test";
 
-logger();
+console.log(str.toLocaleUpperCase());
 
-const calc = (a, b) => {
-    // console.log('YEP');
-    return a + b;
-};
+const fruit = "Some fruit";
 
-console.log(calc(2, 10));
-console.log(calc(20, 10));
-console.log(calc(21, 90));
+console.log(fruit.indexOf("fruit"));
+
+const logg = "Hello world";
+
+// console.log(logg.slice(6, 11));
+
+// console.log(logg.substring(6, 11));
+
+console.log(logg.substr(6, 3));
+
+let guestList = "Guests:\n * John\n * Pete\n * Mary";
+
+console.log(guestList); // список гостей, состоящий из нескольких строк
+
+console.log( "\u{1F60D}" );
